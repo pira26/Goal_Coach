@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { firebaseApp } from './firebase';
 import AddGoal from './containers/AddGoal';
 import GoalList from './containers/GoalList';
+import CompleteGoalList from './components/CompleteGoalList';
 
 class App extends Component {
 
@@ -13,11 +14,19 @@ class App extends Component {
 	
 	render() {
     	return (
-      		<div>
-      			<h3>Goals</h3>
+      		<div style={{margin: '5px'}}>
       			
+            <h3>Goal Coach</h3>
       			<AddGoal />
-      			<GoalList />
+            <hr/>
+
+            <h4>Goals</h4>
+            <GoalList />
+            <hr/>
+
+            <h4>Complete Goals</h4>
+            <CompleteGoalList />
+            <hr/>
 
       			<button type="button"
 		      			className="btn btn-danger"
@@ -28,7 +37,7 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-	console.log('state', state);
+	//console.log('state', state);
 	return {}
 }
 
