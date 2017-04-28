@@ -17,7 +17,7 @@ export default class SignUp extends Component {
 	}
 
 	signUp() {
-		console.log('log in !!!!!!!!!!!', this.state);
+		// console.log('log in !!!!!!!!!!!', this.state);
 		const { email, password } = this.state;
 		firebaseApp.auth().createUserWithEmailAndPassword(email, password)
 			.catch(err => {
